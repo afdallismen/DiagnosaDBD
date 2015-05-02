@@ -20,6 +20,9 @@ public class MInfo {
         this.setDesc(desc);
     }
 
+    public MInfo() {
+    }
+
     /**
      * @return the id
      */

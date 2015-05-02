@@ -20,9 +20,9 @@ public class MPertanyaan {
     }
     
     public MPertanyaan(int id, String kuestion, boolean jawaban) {
-        this.setId(id);
-        this.setKuestion(kuestion);
-        this.setJawaban(jawaban);
+        this.id = id;
+        this.kuestion = kuestion;
+        this.jawaban = jawaban;
     }
 
     /**

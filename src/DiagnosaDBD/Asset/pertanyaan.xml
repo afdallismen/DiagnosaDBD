@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<pertanyaan id="0">Demam tinggi yang mendadak</pertanyaan>
-	<pertanyaan id="1">Sakit kepala berat atau nyeri kepala</pertanyaan>
-	<pertanyaan id="2">Nyeri punggung dan nyeri sendi</pertanyaan>
-	<pertanyaan id="3">Nyeri ulu hati</pertanyaan>
-	<pertanyaan id="4">Sakit perut dan perasaan mual</pertanyaan>
-	<pertanyaan id="5">Bintik-bintik merah</pertanyaan>
-	<pertanyaan id="6">Pilek</pertanyaan>
-	<pertanyaan id="7">Muntah-muntah/diare</pertanyaan>	
+	<pertanyaan id="0">Demam tinggi yang mendadak ?</pertanyaan>
+	<pertanyaan id="1">Sakit kepala berat atau nyeri kepala ?</pertanyaan>
+	<pertanyaan id="2">Nyeri punggung dan nyeri sendi ?</pertanyaan>
+	<pertanyaan id="3">Nyeri ulu hati ?</pertanyaan>
+	<pertanyaan id="4">Sakit perut dan perasaan mual ?</pertanyaan>
+	<pertanyaan id="5">Bintik-bintik merah ?</pertanyaan>
+	<pertanyaan id="6">Pilek ?</pertanyaan>
+	<pertanyaan id="7">Muntah-muntah/diare ?</pertanyaan>	
 </root>

@@ -6,39 +6,49 @@
 package DiagnosaDBD.Controller;
 
 import DiagnosaDBD.Model.MPertanyaan;
+import DiagnosaDBD.Plugins.Xml;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author afdallismen
  */
 public class CPertanyaan {
-    private MPertanyaan mP;
-    private String[][] kT;
-    /**
-     * @return the MP
-     */
-    public MPertanyaan getmP() {
-        return mP;
+    private List<MPertanyaan> listPertanyaan;
+
+    public CPertanyaan() {
+        this.listPertanyaan = new ArrayList<>();
+    }
+    
+    
+
+    public List<MPertanyaan> getListPertanyaan() {
+        return listPertanyaan;
     }
 
-    /**
-     * @param mP the mP to set
-     */
-    public void setmP(MPertanyaan mP) {
-        this.mP = mP;
-    }    
+    public void setListPertanyaan() {
+        Xml x = new Xml();
+        String[][] xmlListPertanyaan = x.getPertanyaan();
+        MPertanyaan[] pertanyaan = new MPertanyaan[xmlListPertanyaan.length];
+        for (int i=0; i<xmlListPertanyaan.length; i++ ){
+            pertanyaan[i] = new MPertanyaan(Integer.parseInt(
+                    xmlListPertanyaan[i][0]), xmlListPertanyaan[i][1], false);
+            this.listPertanyaan.add(pertanyaan[i]);
+        }
+    }     
 
-    /**
-     * @return the kT
-     */
-    public String[][] getkT() {
-        return kT;
-    }
-
-    /**
-     * @param kT the kT to set
-     */
-    public void setkT() {
-        this.kT = kT;
+    public boolean getResult() {
+        if (listPertanyaan.get(0).isJawaban()){
+            int countTrue = 0;
+            for (MPertanyaan listPertanyaan1 : listPertanyaan) {
+                if (listPertanyaan1.isJawaban()) {
+                    countTrue++;
+                }               
+            }
+            return countTrue >= 3;
+        } else {
+            return false;
+        }      
     }
 }
